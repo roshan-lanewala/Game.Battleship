@@ -26,8 +26,10 @@ namespace Game.Battleship.Contracts
 
             if (Player1.HasLost)
                 return $"{Player2.Name} has won the game!";
+            if (Player2.HasLost)
+                return $"{Player1.Name} has won the game!";
 
-            return $"{Player1.Name} has won the game!";
+            return null;
         }
 
         private void PlayRound()
